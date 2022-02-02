@@ -5,5 +5,37 @@
 {% endblock %}
 
 {% block body %}
-<h1>TEMPLATE</h1>
+<div class="content">
+
+    <h1>Van-e ekönyv belőle?</h1>
+
+    <table>
+
+        <tr>
+
+            <th>Író</th>
+            <th>Cím</th>
+            <th>Link</th>
+            <th>Ár</th>
+            <th>Borító</th>
+            <th>Webshop</th>
+
+        </tr>
+
+        {% for book in books %}
+        <tr>
+
+            <td>{{book.author}}</td>
+            <td>{{book.title}}</td>
+            <td><a href={{book.link}}>Webshoplink</a></td>
+            <td>{{book.price}}</td>
+            <td><img src={{book.coverlink}}></td>
+            <td>{{book.source}}</td>
+
+        {% endfor %}
+        </tr>
+
+    </table>
+
+</div>
 {% endblock %}
