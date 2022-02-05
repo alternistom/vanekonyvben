@@ -5,20 +5,20 @@
 {% endblock %}
 
 {% block body %}
+<div class="container">
 <div class="content">
 
-    <h1>Van-e ekönyv belőle?</h1>
-
-    <table>
+    <h1 class='display-1 text-center'>Van-e ekönyv belőle?</h1>
+   
+    <br><br>
+    <table class="table table-striped">
 
         <tr>
 
             <th>Író</th>
             <th>Cím</th>
             <th>Link</th>
-            <th>Ár</th>
-            <th>Borító</th>
-            <th>Webshop</th>
+            
 
         </tr>
 
@@ -27,15 +27,14 @@
 
             <td>{{book.author}}</td>
             <td>{{book.title}}</td>
-            <td><a href={{book.link}}>Webshoplink</a></td>
-            <td>{{book.price}}</td>
-            <td><img src={{book.coverlink}}></td>
-            <td>{{book.source}}</td>
+            <td><a href={{book.webshoplink}}>{{book.source}}</a></td>
+            
+            
 
         {% endfor %}
         </tr>
 
     </table>
 
-</div>
+</div></div>
 {% endblock %}
